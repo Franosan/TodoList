@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/03a64a1742.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>TODO LIST</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="logo">TODO LIST</h1>
+    </header>
+    <main class="container">
+      <div class="container-projects">
+        <button class="btn-new-project">+ New Project</button>
+        <h2 class="projects-heading">Projects &darr;</h2>
+        <form id="projets-form" class="new-project-form hidden">
+          <input
+            type="text"
+            class="input input-new-project"
+            id="new-project"
+            required
+          />
+          <div class="btns-flex">
+            <button class="input-btns confirm-new-project-btn" type="submit">
+              Confirm
+            </button>
+            <button class="input-btns cancel-new-project-btn" type="button">
+              Cancel
+            </button>
+          </div>
+        </form>
+        <ul class="projects-list"></ul>
+      </div>
+      <div class="container-tasks">
+        <button class="btn-new-task">+ New Task</button>
+        <h2 class="tasks-heading">Tasks &darr;</h2>
+        <form id="tasks-form" class="new-task-form hidden">
+          <div class="task-inputs">
+            <div class="task-name-box">
+              <label for="new-task">Task: </label>
+              <input
+                type="text"
+                class="input input-new-task"
+                id="new-task"
+                required
+                placeholder="My task"
+              />
+            </div>
+            <div class="task-date-box">
+              <label for="new-date">Due date: </label>
+              <input
+                type="date"
+                class="input input-new-task-date"
+                id="new-date"
+                required
+              />
+            </div>
+          </div>
+          <div class="btns-flex-task">
+            <button class="input-btns-task confirm-new-task-btn" type="submit">
+              Confirm
+            </button>
+            <button class="input-btns-task cancel-new-task-btn" type="button">
+              Cancel
+            </button>
+          </div>
+        </form>
+        <ul id="tasks-list" class="tasks-list"></ul>
+      </div>
+    </main>
+    <footer class="footer">© Copyright by Frano Bakovic</footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
